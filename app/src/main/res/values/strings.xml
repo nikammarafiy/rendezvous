@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Rendezvous</string>
+    <string name="latlong">unable to retrieve location</string>
+    <string name="action_settings">settings</string>
+    <string name="toggle_updates">location updates</string>
+    <string name="address_display">unable to retrieve address</string>
+    <string name="share_on">On</string>
+    <string name="share_off">Off</string>
+    <string name="gps_alert_message">Use GPS/location services for more accurate location sharing?</string>
+    <string name="gps_alert_positive">Location Settings</string>
+    <string name="gps_alert_negative">Continue</string>
+    <string name="add_to_existing">add to existing</string>
+    <string name="add_to_new">add to new</string>
+
+    <!-- button string resources -->
+    <string name="button_groups">groups</string>
+    <string name="button_friends">friends</string>
+    <string name="button_search">search</string>
+    <string name="search_prompt">search contacts</string>
+    <string name="title_activity_unregistered_alert_box">unregistered_alert_box</string>
+
+    <!-- unregistered alert resources -->
+    <string name="alert_message">looks like this user isn\'t registered</string>
+    <string name="alert_okay">Okay</string>
+
+</resources>

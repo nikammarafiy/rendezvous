@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_element"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#F5FFFFFF"
+    android:descendantFocusability="blocksDescendants"
+    android:weightSum="3">
+
+    <TextView
+        android:id="@android:id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="10dp"
+        android:layout_weight="2"
+        android:textSize="@dimen/contacts_results_font_size"/>
+
+    <TextView
+        android:id="@android:id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft = "10dp"
+        android:layout_weight = "1"
+        android:textSize="@dimen/phone_results_font_size"/>
+
+    <LinearLayout
+        android:id="@+id/add_selected"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/add_select_height"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/add_to_existing"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/add_to_existing"
+            android:textSize="@dimen/add_selected_font_size"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="#B2551A8B"/>
+
+        <TextView
+            android:id="@+id/add_to_new"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/add_selected_font_size"
+            android:text="@string/add_to_new"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="#8C551A8B"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+

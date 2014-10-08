@@ -1,0 +1,144 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main">
+
+    <LinearLayout
+        android:id="@+id/nav_bar"
+        style="?android:buttonBarStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#8C551A8B"
+        android:divider="?android:dividerVertical"
+        android:showDividers="middle"
+        android:weightSum="3">
+
+
+        <Button
+            android:id="@+id/groups"
+            style="?android:buttonBarButtonStyle"
+            android:textSize="@dimen/nav_bar_text_size"
+            android:hapticFeedbackEnabled="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/button_groups"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/nav_bar_button_height"
+            android:textColor="#FFFFFF"/>
+
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width="1dp"
+            android:weightSum="10">
+            <View
+                android:layout_height="30dp"
+                android:layout_width="1dp"
+                android:background="#FFFFFF"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/friends"
+            style="?android:buttonBarButtonStyle"
+            android:hapticFeedbackEnabled="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/button_friends"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textSize="@dimen/nav_bar_text_size"
+            android:layout_height="@dimen/nav_bar_button_height"
+            android:textColor="#FFFFFF"/>
+
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width="1dp">
+            <View
+                android:layout_height="30dp"
+                android:layout_width="1dp"
+                android:background="#FFFFFF"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/search"
+            style="?android:buttonBarButtonStyle"
+            android:hapticFeedbackEnabled="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/button_search"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textSize="@dimen/nav_bar_text_size"
+            android:layout_height="@dimen/nav_bar_button_height"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/main_map"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nav_bar"
+        android:name="com.google.android.gms.maps.MapFragment" />
+
+    <LinearLayout
+        android:id="@+id/groups_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nav_bar"
+        android:orientation="vertical"
+        android:visibility="gone">
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/search_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nav_bar"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/search_bar_size"
+            android:imeOptions="actionDone"
+            android:hint="@string/search_prompt"
+            android:inputType="text"
+            android:maxLines="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_nav_toggle_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal"
+        android:background="#00FFFFFF">
+
+        <RelativeLayout
+            android:id="@+id/wrapper_layout"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <Switch
+                android:id="@+id/updates_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/toggle_updates"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textColorHint="#551A8B"
+                android:textOff="@string/share_off"
+                android:textOn="@string/share_on"
+                android:textSize="@dimen/toggle_text_size"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
